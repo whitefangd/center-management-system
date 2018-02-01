@@ -1,0 +1,15 @@
+<div [ngClass]="' dropdown ' + cpnClass">
+    <button aria-expanded="false" 
+        aria-haspopup="true" 
+        [ngClass]="' btn dropdown-toggle btn-' + Theme.Background + ' text-' + Theme.Text " 
+        data-toggle="dropdown" id="change-theme" type="button">
+        Đổi Theme
+    </button>
+    <div aria-labelledby="change-theme" class="dropdown-menu">
+        <a *ngFor="let theme of ThemeKeys" 
+            [ngClass]="[' dropdown-item bg-' + Themes[theme].Background + ' text-' + Themes[theme].Text]"
+            (click)="changeTheme($event, theme)" >
+            {{ Themes[theme].Name | translate }}
+        </a>
+    </div>
+</div>

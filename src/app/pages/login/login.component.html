@@ -1,0 +1,100 @@
+<div class="h-100 row">
+    <div class="m-auto">
+        <div class=" login-box">
+            <div class="row">
+                <div [class]="' col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-3 pb-3 border border-' + Theme.Background ">
+                    <div class="row">
+                        <div class="col">
+                            <button [class]="'btn btn-outline-' + Theme.Background " 
+                                routerLink="/register"
+                                type="button">
+                                {{ 'login.register' | translate }}
+                            </button>
+                        </div>
+                        <div class="col">
+                            <change-theme [cpnClass]="' float-right '" ></change-theme>
+                        </div>
+                    </div>
+                    <login-logo></login-logo>
+                    <div>
+                        <div class="form-row" >
+                            <div class="col">
+                                <label for="username">
+                                    {{ 'login.username' | translate }}
+                                    <span class="text-red" >{{ 'app.required' | translate }}</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-addon" id="usernameprepend">
+                                            <i class="fas fa-user">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    <input aria-describedby="usernameprepend" class="form-control" id="username" placeholder="{{ 'login.username' | translate }}" required="" type="text"/>
+                                </div>
+                                <div class="d-block invalid-feedback">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row" >
+                            <div class="col">
+                                <label for="password">
+                                    {{ 'login.password' | translate }}
+                                    <span class="text-red" >{{ 'app.required' | translate }}</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-addon" id="passwordprepend">
+                                            <i class="fas fa-key">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    <input aria-describedby="passwordprepend" class="form-control" id="password" placeholder="{{ 'login.password' | translate }}" required="" type="text"/>
+                                </div>
+                                <div class="d-block invalid-feedback">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row" >
+                            <div class="col">
+                                <div class="input-group">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input class="custom-control-input" type="checkbox"/>
+                                        <span class="custom-control-indicator">
+                                        </span>
+                                        <span class="custom-control-description">
+                                            {{ 'login.remember' | translate }}
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="d-block invalid-feedback mt-0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row" >
+                            <div class="col">
+                                <div class="input-group mt-2">
+                                    <button [class]="'btn btn-' + Theme.Background + ' text-' + Theme.Text " type="button">
+                                        {{ 'login.login' | translate }}
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group mt-2 d-block">
+                                    <button [class]="'float-right btn btn-outline-' + Theme.Background " 
+                                        routerLink="/forget-password"
+                                        type="button">
+                                        {{ 'login.forget' | translate }}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div [class]="' d-none d-lg-block col-lg-6 col-xl-6  pt-3 pb-3  bg-' + Theme.Background +  ' text-' + Theme.Text">
+                    <login-info></login-info>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

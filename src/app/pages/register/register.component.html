@@ -1,0 +1,111 @@
+<div class="h-100 row">
+    <div class="m-auto">
+        <div class=" login-box">
+            <div class="row">
+                <div [class]="' col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-3 pb-3 border border-' + Theme.Background ">
+                    <div class="row">
+                        <div class="col">
+                            <button [class]="'btn btn-outline-' + Theme.Background " 
+                                routerLink="/login"
+                                type="button">
+                                {{ 'login.login' | translate }}
+                            </button>
+                        </div>
+                        <div class="col">
+                            <change-theme [cpnClass]="' float-right '" ></change-theme>
+                        </div>
+                    </div>
+                    <login-logo></login-logo>
+                    <div>
+                        <div class="form-row" >
+                            <div class="col">
+                                <label for="validationTooltipUsername">
+                                    {{ 'login.username' | translate }}
+                                    <span class="text-red" >{{ 'app.required' | translate }}</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-addon" id="validationTooltipUsernamePrepend">
+                                            <i class="fas fa-user">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    <input aria-describedby="validationTooltipUsernamePrepend" class="form-control" id="validationTooltipUsername" placeholder="{{ 'login.username' | translate }}" required="" type="text"/>
+                                </div>
+                                <div class="d-block invalid-feedback">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row"  >
+                            <div class="col">
+                                <label for="validationTooltipUsername">
+                                    {{ 'login.password' | translate }}
+                                    <span class="text-red" >{{ 'app.required' | translate }}</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-addon" id="validationTooltipUsernamePrepend">
+                                            <i class="fas fa-key">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    <input aria-describedby="validationTooltipUsernamePrepend" class="form-control" id="validationTooltipUsername" placeholder="{{ 'login.password' | translate }}" required="" type="text"/>
+                                </div>
+                                <div class="d-block invalid-feedback">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row" >
+                            <div class="col">
+                                <label for="validationTooltipUsername">
+                                    {{ 'login.repassword' | translate }}
+                                    <span class="text-red" >{{ 'app.required' | translate }}</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-addon" id="validationTooltipUsernamePrepend">
+                                            <i class="fas fa-key">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    <input aria-describedby="validationTooltipUsernamePrepend" class="form-control" id="validationTooltipUsername" placeholder="{{ 'login.repassword' | translate }}" required="" type="text"/>
+                                </div>
+                                <div class="d-block invalid-feedback">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row" >
+                            <div class="col">
+                                <label for="validationTooltipUsername">
+                                    {{ 'login.email' | translate }}
+                                    <span class="text-red" >{{ 'app.required' | translate }}</span>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-addon" id="validationTooltipUsernamePrepend">
+                                            <i class="fas fa-key">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    <input aria-describedby="validationTooltipUsernamePrepend" class="form-control" id="validationTooltipUsername" placeholder="{{ 'login.email' | translate }}" required="" type="text"/>
+                                </div>
+                                <div class="d-block invalid-feedback">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col">
+                                <button [class]="' btn btn-' + Theme.Background + ' text-' + Theme.Text " type="button">
+                                    {{ 'login.register' | translate }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div [class]="' d-none d-lg-block col-lg-6 col-xl-6  pt-3 pb-3  bg-' + Theme.Background +  ' text-' + Theme.Text">
+                    <login-info></login-info>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

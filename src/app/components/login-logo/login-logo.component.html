@@ -1,0 +1,18 @@
+<div>
+    <div class="row">
+        <div class="col">
+            <img alt="..." class="rounded mx-auto d-block" src="assets/resources/logo/logo.png"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="col">
+                <button [class]="' btn btn-block btn-' + Theme.Background + ' text-' + Theme.Text " 
+                    routerLink="/main/home"
+                    type="button">
+                    {{ 'login.home' | translate }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

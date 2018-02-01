@@ -1,0 +1,147 @@
+<header [class]="'navbar navbar-expand-lg ' + NavbarClass()">
+    <a class="navbar-brand" href="#">
+        <img alt="" height="30" src="assets/resources/logo/logo.png" width="30"/>
+    </a>
+    <button aria-controls="navbarSupportedContent" 
+        aria-expanded="false" aria-label="Toggle navigation" 
+        class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon">
+        </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/login" >Login <span class="sr-only">(current)</span></a>
+                
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/heroes">heroes <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <hr class="d-lg-none bg-white" >
+        <ul class="navbar-nav" *ngIf="UserDetail.Authentication" >
+            <li class="nav-item" *ngIf=" UserDetail.Messages.length == 0 " >
+                <div class="nav-link disabled" >
+                    <i class="fas fa-envelope"></i>
+                    <span class="d-lg-none">{{ 'app.messages' | translate }}
+                    </span>
+                </div>
+            </li>
+            <li class="nav-item dropdown" *ngIf=" UserDetail.Messages.length > 0 ">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <i class="fas fa-envelope"></i>
+                    <span class="d-lg-none">{{ 'app.messages' | translate }}
+                        <span class="badge badge-pill badge-primary">{{ UserDetail.Messages.length }} {{ 'app.new' | translate }}</span>
+                    </span>
+                    <span class="indicator text-primary d-none d-lg-block">
+                        <i class="fa fa-fw fa-circle"></i>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <ng-template ngFor let-message [ngForOf]="UserDetail.Messages" >
+                        <div>
+                            <a class="dropdown-item" href="#">
+                                <strong>{{ message.UserName }}</strong>
+                                <span class="small float-right text-muted">{{ message.Date | date: ('app.datetimeformat' | translate) }}</span>
+                                <div class="dropdown-message small">{{ message.Message }}</div>
+                            </a>
+                        </div>
+                    </ng-template>
+                </div>
+            </li>
+
+            <li class="nav-item" *ngIf=" UserDetail.NoticationsCount == 0 " >
+                <div class="nav-link disabled" >
+                    <i class="fas fa-bell"></i>
+                    <span class="d-lg-none">{{ 'app.notication' | translate }}
+                    </span>
+                </div>
+            </li>
+            <li class="nav-item dropdown" *ngIf=" UserDetail.NoticationsCount > 0 " >
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <i class="fas fa-bell"></i>
+                    <span class="d-lg-none">{{ 'app.notication' | translate }}
+                        <span class=" badge badge-pill badge-primary ">
+                            {{ UserDetail.NoticationsCount }} {{ 'app.new' | translate }}
+                        </span>
+                    </span>
+                    <span class="indicator text-primary d-none d-lg-block">
+                        <i class="fa fa-fw fa-circle"></i>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <ng-template ngFor let-notication [ngForOf]="UserDetail.Notications" >
+                        <div>
+                            <h6 class="dropdown-header" href="#" >{{ notication.Date | date: ('app.dateformat' | translate) }}</h6>
+                            <div class="dropdown-divider"></div>
+                            <ng-template ngFor let-item [ngForOf]="notication.Items" >
+                                <a class="dropdown-item" href="#">
+                                    <img src="{{ item.AvatarSrc }}" width="50" height="50" class="rounded-circle">
+                                    <strong>{{ item.UserName }}</strong>
+                                    <span class="small float-right text-muted">{{ item.Date | date: ('app.timeformat' | translate) }}</span>
+                                    <div class="dropdown-message small">{{ item.Message }}</div>
+                                </a>
+                            </ng-template>
+                        </div>
+                    </ng-template>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <i class="fas fa-user"></i>
+                    <span class="d-lg-none">{{ UserDetail.UserName }}</span>
+                </a>
+                <div class=" dropdown-menu dropdown-menu-right ">
+                    <h6 class="dropdown-header" href="#" >
+                        <span>{{ UserDetail.UserName }}</span> <span class="badge badge-pill badge-secondary"> {{ UserDetail.UserTypeName }}</span>
+                    </h6>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">{{ 'app.profile' | translate }}</a>
+                    <a class="dropdown-item" href="#">{{ 'app.setting' | translate }}</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <i class="fas fa-paint-brush">
+                    </i>
+                    <span class="d-lg-none">{{ 'theme.change-theme' | translate }}</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a *ngFor="let theme of ThemeKeys" [ngClass]="['dropdown-item bg-' + Themes[theme].Background + ' text-' + Themes[theme].Text]" 
+                        (click)="changeTheme($event, theme)"
+                        class="dropdown-item">
+                        {{ Themes[theme].Name | translate }}
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="d-lg-none">{{ 'app.logout' | translate }}</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav" *ngIf="!UserDetail.Authentication" >
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <i class="fas fa-paint-brush">
+                    </i>
+                    <span class="d-lg-none">{{ 'theme.change-theme' | translate }}</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a *ngFor="let theme of ThemeKeys" [ngClass]="['dropdown-item bg-' + Themes[theme].Background + ' text-' + Themes[theme].Text]" 
+                        (click)="changeTheme($event, theme)"
+                        class="dropdown-item">
+                        {{ Themes[theme].Name | translate }}
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span class="d-lg-none">{{ 'app.login' | translate }}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>

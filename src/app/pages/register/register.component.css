@@ -1,0 +1,24 @@
+.login-box {
+    min-width: 300px;
+    max-width: 600px;
+}
+@media (min-width: 576px) {
+    .login-box {
+        min-width: 384px;
+    }
+}
+@media (min-width: 768px) {
+    .login-box {
+        min-width: 384px;
+    }
+}
+@media (min-width: 992px) {
+    .login-box {
+        min-width: 768px;
+    }
+}
+@media (min-width: 1200px) {
+    .login-box {
+        min-width: 768px;
+    }
+}

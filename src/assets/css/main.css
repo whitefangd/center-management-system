@@ -1,0 +1,15 @@
+i {
+    line-height: 1.5 !important;
+}
+header .navbar-collapse .navbar-nav>.nav-item.dropdown>.nav-link .indicator {
+    position: absolute;
+    top: 5px;
+    left: 21px;
+    font-size: 10px;
+}
+
+header .navbar-collapse .navbar-nav>.nav-item.dropdown .dropdown-menu .dropdown-item>.dropdown-message {
+  overflow: hidden;
+  max-width: 250px;
+  text-overflow: ellipsis;
+}

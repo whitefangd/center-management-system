@@ -1,0 +1,11 @@
+{
+    "login": {
+        "username": "User name",
+        "password": "Password",
+        "remember": "Remember me ?",
+        "login": "Login",
+        "forget": "Forget password ?",
+        "repassword":"Confirm password",
+        "email": "Email address"
+    }
+}
