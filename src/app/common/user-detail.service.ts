@@ -38,6 +38,10 @@ export class UserDetailService {
 		}
 	];
 
+	public set Authentication(value) {
+		this._Authentication = value;
+	}
+
 	public get AccountID() {
 		return this._AccountID;
 	};

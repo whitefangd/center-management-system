@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ThemesService } from './../../plugins/plugins';
 import { Themes, ThemeKeys } from './../../plugins/themes/themes';
 import { UserDetailService } from '../../common/common';
+import { Pages } from '../../pages/pages';
 
 @Component({
 	selector: 'app-header',
@@ -18,22 +19,6 @@ export class AppHeaderComponent {
 
 	public changeTheme($event, theme) {
 		this.ThemeKey = theme;
-	}
-
-	set ThemeKey(theme: any) {
-		this._ThemeService.setThemeKey(theme);
-	};
-
-	get ThemeKey() {
-		return this._ThemeService.ThemeKey;
-	}
-
-	get Theme() {
-		return this._ThemeService.Theme;
-	}
-
-	get UserDetail() {
-		return this._UserDetailService;
 	}
 
 	public NavbarClass() {
@@ -52,5 +37,25 @@ export class AppHeaderComponent {
 	public ButtonThemeClass() {
 		let classes = 'btn btn-' + this.Theme.Background + ' text' + this.Theme.Text;
 		return classes;
+	}
+
+	public get Pages() {
+		return Pages;
+	};
+
+	public set ThemeKey(theme: any) {
+		this._ThemeService.setThemeKey(theme);
+	};
+
+	public get ThemeKey() {
+		return this._ThemeService.ThemeKey;
+	}
+
+	public get Theme() {
+		return this._ThemeService.Theme;
+	}
+
+	public get UserDetail() {
+		return this._UserDetailService;
 	}
 }

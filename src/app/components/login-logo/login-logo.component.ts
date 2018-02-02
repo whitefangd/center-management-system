@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 import { ThemesService, LanguagesService } from './../../plugins/plugins';
+import { Pages } from '../../pages/pages';
 
 
 @Component({
@@ -21,6 +22,10 @@ export class LoginLogoComponent {
 		this.ForgetPassword.emit();
 	}
 
+	public get Pages() {
+		return Pages;
+	};
+	
 	public get Theme() {
 		return this._ThemeService.Theme;
 	}

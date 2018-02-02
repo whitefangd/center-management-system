@@ -11,11 +11,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" routerLink="/login" >Login <span class="sr-only">(current)</span></a>
+                <a class="nav-link" >Login <span class="sr-only">(current)</span></a>
                 
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/heroes">heroes <span class="sr-only">(current)</span></a>
+                <a class="nav-link" >heroes <span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <hr class="d-lg-none bg-white" >
@@ -31,9 +31,9 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                     <i class="fas fa-envelope"></i>
                     <span class="d-lg-none">{{ 'app.messages' | translate }}
-                        <span class="badge badge-pill badge-primary">{{ UserDetail.Messages.length }} {{ 'app.new' | translate }}</span>
+                        <span class="badge badge-pill badge-warning">{{ UserDetail.Messages.length }} {{ 'app.new' | translate }}</span>
                     </span>
-                    <span class="indicator text-primary d-none d-lg-block">
+                    <span class="indicator text-warning d-none d-lg-block">
                         <i class="fa fa-fw fa-circle"></i>
                     </span>
                 </a>
@@ -61,11 +61,11 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                     <i class="fas fa-bell"></i>
                     <span class="d-lg-none">{{ 'app.notication' | translate }}
-                        <span class=" badge badge-pill badge-primary ">
+                        <span class=" badge badge-pill badge-danger ">
                             {{ UserDetail.NoticationsCount }} {{ 'app.new' | translate }}
                         </span>
                     </span>
-                    <span class="indicator text-primary d-none d-lg-block">
+                    <span class="indicator text-danger d-none d-lg-block">
                         <i class="fa fa-fw fa-circle"></i>
                     </span>
                 </a>
@@ -137,7 +137,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/login">
+                <a class="nav-link" routerLink="{{ Pages.LOGIN }}">
                     <i class="fas fa-sign-in-alt"></i>
                     <span class="d-lg-none">{{ 'app.login' | translate }}</span>
                 </a>

@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { ThemesService, LanguagesService } from './../../plugins/plugins';
 import { fadeInAnimation } from '../../animations/index';
+import { Pages } from '../pages';
 
 @Component({
 	selector: 'forget-password',
@@ -16,6 +17,10 @@ export class ForgetPasswordComponent {
 	constructor(
 		private _ThemeService: ThemesService,
 		private _LanguagesService: LanguagesService) {
+	}
+
+	public get Pages() {
+		return Pages;
 	}
 
 	public get Theme() {
