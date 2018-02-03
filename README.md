@@ -4,12 +4,12 @@ Overview: pendding
 
 ## Broswer support
 
-IE 9, 10, 11
-Microsoft Edge
-Chrome
-Firefox
-Opera
-Safari
+* IE 9, 10, 11
+* Microsoft Edge
+* Chrome
+* Firefox
+* Opera
+* Safari
 
 ## How to build and run
 
