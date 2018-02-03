@@ -1,5 +1,18 @@
 # Center management system
 
+Overview: pendding
+
+## Broswer support
+
+IE 9, 10, 11
+Microsoft Edge
+Chrome
+Firefox
+Opera
+Safari
+
+## How to build and run
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
 ## Development server
