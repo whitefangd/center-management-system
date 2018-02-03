@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ThemesService } from './../../plugins/plugins';
 import { Themes, ThemeKeys } from './../../plugins/themes/themes';
@@ -14,6 +15,7 @@ export class AppHeaderComponent {
 	ThemeKeys = ThemeKeys;
 
 	constructor(
+		private _Router: Router,
 		private _ThemeService: ThemesService,
 		private _UserDetailService: UserDetailService) { }
 
@@ -37,6 +39,11 @@ export class AppHeaderComponent {
 	public ButtonThemeClass() {
 		let classes = 'btn btn-' + this.Theme.Background + ' text' + this.Theme.Text;
 		return classes;
+	}
+
+	public logout($event) {
+		this._UserDetailService.Authentication = false;
+		this._Router.navigate([Pages.HOME]);
 	}
 
 	public get Pages() {
