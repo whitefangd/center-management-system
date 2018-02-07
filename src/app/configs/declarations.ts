@@ -4,6 +4,9 @@ import { ChangeThemeComponent } from './../components/change-theme/change-theme.
 import { LoginInfoComponent } from './../components/login-info/login-info.component';
 import { LoginLogoComponent } from './../components/login-logo/login-logo.component';
 
+import { LayoutComponent } from './../layout/layout.component';
+import { ContentComponent } from './../layout/content.component';
+
 import { AppComponent } from './../pages/app/app.component';
 import { LoginComponent } from './../pages/login/login.component';
 import { RegisterComponent } from './../pages/register/register.component';
@@ -25,5 +28,8 @@ export const Declarations = [
     RegisterComponent,
     ForgetPasswordComponent,
     LoginLogoComponent,
-    HomeComponent
+    HomeComponent,
+
+    LayoutComponent,
+    ContentComponent
 ];

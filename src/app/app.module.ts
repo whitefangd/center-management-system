@@ -5,12 +5,15 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DynamicModule } from 'ng-dynamic-component';
 
 import { AppComponent } from './pages/app/app.component';
 import { AppRoutingModule } from './configs/app-routing.module';
 import { Declarations } from './configs/declarations';
 import { ThemesService, LanguagesService } from './plugins/plugins'
 import { UserDetailService } from './common/common'
+import { LayoutComponent } from './layout/layout.component'
+import { ContentComponent } from './layout/content.component'
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,6 +22,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
 	declarations: Declarations,
 	imports: [
+		DynamicModule.withComponents([LayoutComponent, ContentComponent]),
 		BrowserModule,
 		AppRoutingModule,
 		HttpClientModule,

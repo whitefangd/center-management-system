@@ -2,31 +2,33 @@ import { Component } from '@angular/core';
 
 import { ThemesService } from './../../plugins/plugins';
 import { fadeInAnimation } from '../../animations/index';
+import { ContentComponent } from '../../layout/content.component';
 
 const LayoutPage = {
-	Parts : [
-		{
-			Top: '',
-			Left: '',
-			Right:'',
-			Bottom:'',
-			Content:'',
+	Type: 1,
+	PartitionTop: {
+		Type: 2,
+		ComponentContent: ContentComponent,
+	},
+	PartitionLeft: {
+		Type: 2,
+		ComponentContent: ContentComponent,
+	},
+	PartitionBottom: {
+		Type: 2,
+		ComponentContent: ContentComponent,
+	},
+	PartitionRight: {
+		Type: 2,
+		ComponentContent: ContentComponent,
+	},
+	PartitionContent: {
+		Type: 1,
+		PartitionContent: {
+			Type: 2,
+			ComponentContent: ContentComponent,
 		},
-		{
-			Top: '',
-			Left: '',
-			Right:'',
-			Bottom:'',
-			Content:'',
-		},
-		{
-			Top: '',
-			Left: '',
-			Right:'',
-			Bottom:'',
-			Content:'',
-		}
-	]
+	}
 }
 
 
@@ -38,7 +40,7 @@ const LayoutPage = {
 })
 export class HomeComponent {
 
-	constructor(private _ThemeService: ThemesService) { }
+	constructor(private _ThemeService: ThemesService) {	}
 
 	public get LayoutPage() {
 		return LayoutPage;
@@ -46,5 +48,9 @@ export class HomeComponent {
 
 	public get Theme() {
 		return this._ThemeService.Theme;
+	}
+
+	public get Partitions() {
+		return LayoutPage;
 	}
 }

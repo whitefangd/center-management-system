@@ -1,0 +1,22 @@
+<div class="row" *ngIf="Type == PartitionType.GRID">
+    <div class="col-12" *ngIf="PartitionTop != null">
+        <ndc-dynamic [ndcDynamicComponent]="PartitionTop" [ndcDynamicInputs]="InputPartitionTop"></ndc-dynamic>
+    </div>
+    <div class="col-1" *ngIf="PartitionLeft != null">
+        <ndc-dynamic [ndcDynamicComponent]="PartitionLeft" [ndcDynamicInputs]="InputPartitionLeft"></ndc-dynamic>
+    </div>
+    <div class="col-10" *ngIf="PartitionContent != null">
+        <ndc-dynamic [ndcDynamicComponent]="PartitionContent" [ndcDynamicInputs]="InputPartitionContent"></ndc-dynamic>
+    </div>
+    <div class="col-1" *ngIf="PartitionRight != null">
+        <ndc-dynamic [ndcDynamicComponent]="PartitionRight" [ndcDynamicInputs]="InputPartitionRight"></ndc-dynamic>
+    </div>
+    <div class="col-12" *ngIf="PartitionBottom != null">
+        <ndc-dynamic [ndcDynamicComponent]="PartitionBottom" [ndcDynamicInputs]="InputPartitionBottom"></ndc-dynamic>
+    </div>
+</div>
+<div class="row" *ngIf="Type == PartitionType.COMPONENT">
+    <div class="col">
+        <ndc-dynamic [ndcDynamicComponent]="ComponentContent"></ndc-dynamic>
+    </div>
+</div>

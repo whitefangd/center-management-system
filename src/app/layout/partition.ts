@@ -1,3 +1,4 @@
+import { ComponentContent } from './component-content';
 
 export class Partition {
 
@@ -9,7 +10,7 @@ export class Partition {
 
     private _PartitionType: Number;
 
-    private _Component: Object;
+    private _ComponentContent: ComponentContent;
 
     constructor() {
 
