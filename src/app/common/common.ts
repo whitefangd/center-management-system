@@ -1,4 +1,4 @@
-import { UserDetailService } from './user-detail.service'
+import { UserDetailService } from '@boluclac/common/user-detail.service'
 
 export {
 	UserDetailService

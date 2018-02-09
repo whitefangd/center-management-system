@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ThemesService } from './../../plugins/plugins';
-import { Themes, ThemeKeys } from './../../plugins/themes/themes';
-import { UserDetailService } from '../../common/common';
-import { Pages } from '../../pages/pages';
+import { ThemesService } from '@boluclac/plugins/plugins';
+import { Themes, ThemeKeys } from '@boluclac/plugins/themes/themes';
+import { UserDetailService } from '@boluclac/common/common';
+import { Pages } from '@boluclac/pages/pages';
 
 @Component({
 	selector: 'app-header',

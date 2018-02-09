@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
-import { PartitionType } from './partition-type';
-import { ComponentContent } from './component-content';
+import { PartitionType } from '@boluclac/layout/partition-type';
+import { ContentComponent } from '@boluclac/components-layout/content/content.component';
 
 @Component({
 	selector: 'layout',
@@ -21,13 +21,12 @@ export class LayoutComponent {
 	private _InputPartitionRight: any = {};
 	private _InputPartitionContent: any = {};
 
-	private _ComponentContent: ComponentContent = null;
+	private _ComponentContent: ContentComponent = null;
 
-	private _InputComponentContent: ComponentContent = {};
+	private _InputComponentContent: ContentComponent = {};
 
 	private _Type: Number;
 
-	// private _ComponentContent: ComponentContent;
 	constructor() {
 	}
 

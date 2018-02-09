@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { ThemesService, LanguagesService } from './../../plugins/plugins';
-import { fadeInAnimation } from '../../animations/index';
-import { Pages } from '../pages';
+import { ThemesService, LanguagesService } from '@boluclac/plugins/plugins';
+import { fadeInAnimation } from '@boluclac/animations/index';
+import { Pages } from '@boluclac/pages/pages';
 
 @Component({
 	selector: 'forget-password',

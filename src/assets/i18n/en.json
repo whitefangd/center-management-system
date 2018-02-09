@@ -1,11 +1,51 @@
 {
+    "app": {
+        "colon": ":",
+        "dateformat": "dd/MM/yyyy",
+        "datetimeformat": "dd/MM/yyyy HH:mm:ss",
+        "timeformat": "HH:mm:ss",
+        "title": "Hệ thống quản lý tập trung",
+        "required": "*",
+        "profile": "Thông tin cá nhân",
+        "setting": "Cài đặt",
+        "login": "Đăng nhập",
+        "logout": "Đăng xuất",
+        "notication": "Thông báo",
+        "messages": "Tin nhắn",
+        "new": "Mới"
+    },
+    "theme": {
+        "change-theme": "Đổi theme",
+        "light": "Sáng",
+        "dark": "Tối",
+        "red": "Đỏ",
+        "pink": "Hồng",
+        "purple": "Tím",
+        "deep-purple": "Tím đậm",
+        "indigo": "Chàm",
+        "blue": "Xanh dương",
+        "light-blue": "Xanh dương nhạt",
+        "cyan": "Lục lam",
+        "teal": "Xanh mòng két",
+        "green": "Xanh lá",
+        "light-green": "xanh lá nhạt",
+        "lime": "Vôi",
+        "yellow": "Vàng",
+        "amber": "Hổ phách",
+        "orange": "Cam",
+        "deep-orange": "Cam đậm",
+        "brown": "Nâu"
+    },
     "login": {
-        "username": "User name",
-        "password": "Password",
-        "remember": "Remember me ?",
-        "login": "Login",
-        "forget": "Forget password ?",
-        "repassword":"Confirm password",
-        "email": "Email address"
+        "username": "Tên đăng nhập",
+        "password": "Mật khẩu",
+        "remember": "Ghi nhớ ?",
+        "login": "Đăng nhập",
+        "forget": "Quên mật khẩu ?",
+        "repassword": "Xác nhận mật khẩu",
+        "email": "Email đăng ký",
+        "register": "Đăng ký",
+        "home": "Trang chủ",
+        "confirmpass": "Gửi xác nhận"
     }
 }

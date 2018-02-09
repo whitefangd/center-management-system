@@ -7,16 +7,16 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DynamicModule } from 'ng-dynamic-component';
 
-import { AppComponent } from './pages/app/app.component';
-import { AppRoutingModule } from './configs/app-routing.module';
-import { Declarations } from './configs/declarations';
-import { ThemesService, LanguagesService } from './plugins/plugins'
-import { UserDetailService } from './common/common'
-import { LayoutComponent } from './layout/layout.component'
-import { ContentComponent } from './layout/content.component'
+import { AppComponent } from '@boluclac/pages/app/app.component';
+import { AppRoutingModule } from '@boluclac/configs/app-routing.module';
+import { Declarations } from '@boluclac/configs/declarations';
+import { ThemesService, LanguagesService } from '@boluclac/plugins/plugins'
+import { UserDetailService } from '@boluclac/common/common'
+import { LayoutComponent } from '@boluclac/layout/layout.component'
+import { ContentComponent } from '@boluclac/components-layout/content/content.component'
 
 export function HttpLoaderFactory(http: HttpClient) {
-	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+	return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
 @NgModule({

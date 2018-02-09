@@ -1,8 +1,8 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { ThemesService, LanguagesService } from './../../plugins/plugins';
-import { Pages } from '../../pages/pages';
+import { ThemesService, LanguagesService } from '@boluclac/plugins/plugins';
+import { Pages } from '@boluclac/pages/pages';
 
 
 @Component({

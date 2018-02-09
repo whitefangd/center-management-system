@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
-import { ThemesService } from './../../plugins/plugins';
-import { fadeInAnimation } from '../../animations/index';
+import { ThemesService } from '@boluclac/plugins/plugins';
+import { fadeInAnimation } from '@boluclac/animations/index';
 
 @Component({
 	selector: 'app-root',

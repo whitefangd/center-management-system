@@ -1,2 +1,2 @@
-export * from './fade-in.animation';
-export * from './slide-in-out.animation'
+export { fadeInAnimation } from '@boluclac/animations/fade-in.animation'
+export { slideInOutAnimation } from '@boluclac/animations/slide-in-out.animation'

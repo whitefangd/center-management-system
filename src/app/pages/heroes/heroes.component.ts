@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { fadeInAnimation } from '../../animations/index';
+import { fadeInAnimation } from '@boluclac/animations/index';
 
 @Component({
 	selector: 'heroes',

@@ -1,19 +1,19 @@
-import { AppHeaderComponent } from './../components/app-header/app-header.component';
-import { AppFooterComponent } from './../components/app-footer/app-footer.component';
-import { ChangeThemeComponent } from './../components/change-theme/change-theme.component';
-import { LoginInfoComponent } from './../components/login-info/login-info.component';
-import { LoginLogoComponent } from './../components/login-logo/login-logo.component';
+import { AppHeaderComponent } from '@boluclac/components/app-header/app-header.component';
+import { AppFooterComponent } from '@boluclac/components/app-footer/app-footer.component';
+import { ChangeThemeComponent } from '@boluclac/components/change-theme/change-theme.component';
+import { LoginInfoComponent } from '@boluclac/components/login-info/login-info.component';
+import { LoginLogoComponent } from '@boluclac/components/login-logo/login-logo.component';
 
-import { LayoutComponent } from './../layout/layout.component';
-import { ContentComponent } from './../layout/content.component';
+import { LayoutComponent } from '@boluclac/layout/layout.component';
+import { ContentComponent } from '@boluclac/components-layout/content/content.component';
 
-import { AppComponent } from './../pages/app/app.component';
-import { LoginComponent } from './../pages/login/login.component';
-import { RegisterComponent } from './../pages/register/register.component';
-import { ForgetPasswordComponent } from './../pages/forget-password/forget-password.component';
-import { MainComponent } from './../pages/main/main.component';
-import { HomeComponent } from './../pages/home/home.component';
-import { HeroesComponent } from './../pages/heroes/heroes.component';
+import { AppComponent } from '@boluclac/pages/app/app.component';
+import { LoginComponent } from '@boluclac/pages/login/login.component';
+import { RegisterComponent } from '@boluclac/pages/register/register.component';
+import { ForgetPasswordComponent } from '@boluclac/pages/forget-password/forget-password.component';
+import { MainComponent } from '@boluclac/pages/main/main.component';
+import { HomeComponent } from '@boluclac/pages/home/home.component';
+import { HeroesComponent } from '@boluclac/pages/heroes/heroes.component';
 
 
 export const Declarations = [

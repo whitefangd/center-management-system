@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ThemesService } from './../../plugins/themes/themes.service';
-import { Themes, ThemeKeys } from './../../plugins/themes/themes';
+import { ThemesService } from '@boluclac/plugins/themes/themes.service';
+import { Themes, ThemeKeys } from '@boluclac/plugins/themes/themes';
 
 @Component({
 	selector: 'change-theme',
