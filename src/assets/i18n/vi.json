@@ -36,6 +36,11 @@
         "deep-orange": "Cam đậm",
         "brown": "Nâu"
     },
+    "language": {
+        "current": "Tiếng việt",
+        "vi": "Tiếng việt",
+        "en": "English"
+    },
     "login": {
         "username": "Tên đăng nhập",
         "password": "Mật khẩu",

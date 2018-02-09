@@ -3,6 +3,7 @@ import { AppFooterComponent } from '@boluclac/components/app-footer/app-footer.c
 import { ChangeThemeComponent } from '@boluclac/components/change-theme/change-theme.component';
 import { LoginInfoComponent } from '@boluclac/components/login-info/login-info.component';
 import { LoginLogoComponent } from '@boluclac/components/login-logo/login-logo.component';
+import { ChangeLanguageComponent } from '@boluclac/components/change-language/change-language.component';
 
 import { LayoutComponent } from '@boluclac/layout/layout.component';
 import { ContentComponent } from '@boluclac/components-layout/content/content.component';
@@ -29,6 +30,7 @@ export const Declarations = [
     ForgetPasswordComponent,
     LoginLogoComponent,
     HomeComponent,
+    ChangeLanguageComponent,
 
     LayoutComponent,
     ContentComponent

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { ThemesService } from '@boluclac/plugins/plugins';
-import { fadeInAnimation } from '@boluclac/animations/index';
+import { ThemesService } from '@boluclac/plugins';
+import { fadeInAnimation } from '@boluclac/animations';
 import { ContentComponent } from '@boluclac/components-layout/content/content.component';
 
 const LayoutPage = {

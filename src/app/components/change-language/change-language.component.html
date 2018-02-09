@@ -1,0 +1,15 @@
+<div [ngClass]="' dropdown ' + cpnClass">
+    <button aria-expanded="false" 
+        aria-haspopup="true" 
+        [ngClass]="' btn dropdown-toggle btn-' + Theme.Background + ' text-' + Theme.Text " 
+        data-toggle="dropdown" id="change-language" type="button">
+        {{ 'language.current' | translate }}
+    </button>
+    <div aria-labelledby="change-language" class="dropdown-menu">
+        <a *ngFor="let language of LanguageKeys" class="dropdown-item "
+            tabindex="0"
+            (click)="changeLanguage($event, language)" >
+            {{ 'language.' + Languages[language] | translate }}
+        </a>
+    </div>
+</div>

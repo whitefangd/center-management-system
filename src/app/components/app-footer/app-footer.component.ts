@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ThemesService } from '@boluclac/plugins/plugins';
+import { ThemesService } from '@boluclac/plugins';
 
 @Component({
 	selector: 'app-footer',

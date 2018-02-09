@@ -10,10 +10,11 @@ import { DynamicModule } from 'ng-dynamic-component';
 import { AppComponent } from '@boluclac/pages/app/app.component';
 import { AppRoutingModule } from '@boluclac/configs/app-routing.module';
 import { Declarations } from '@boluclac/configs/declarations';
-import { ThemesService, LanguagesService } from '@boluclac/plugins/plugins'
-import { UserDetailService } from '@boluclac/common/common'
+import { ThemesService, LanguagesService } from '@boluclac/plugins'
+import { UserDetailService } from '@boluclac/common/'
 import { LayoutComponent } from '@boluclac/layout/layout.component'
 import { ContentComponent } from '@boluclac/components-layout/content/content.component'
+import { ComponentsLayout } from '@boluclac/components-layout/'
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -22,7 +23,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
 	declarations: Declarations,
 	imports: [
-		DynamicModule.withComponents([LayoutComponent, ContentComponent]),
+		DynamicModule.withComponents([].concat([ LayoutComponent ], ComponentsLayout)),
 		BrowserModule,
 		AppRoutingModule,
 		HttpClientModule,

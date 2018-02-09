@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
-import { ThemesService } from '@boluclac/plugins/plugins';
-import { fadeInAnimation } from '@boluclac/animations/index';
+import { Global } from '@boluclac/common'
+import { ThemesService } from '@boluclac/plugins';
+import { fadeInAnimation } from '@boluclac/animations';
 
 @Component({
 	selector: 'app-root',
@@ -19,8 +20,8 @@ export class AppComponent {
 		private router: Router,
 		protected _ThemeService: ThemesService,
 		protected _translate: TranslateService) {
-		this._translate.setDefaultLang('vi');
-		this._translate.use('vi');
+		this._translate.setDefaultLang(Global.LANGUAGES.VI);
+		this._translate.use(Global.LANGUAGES.VI);
 	}
 
 	ngOnInit() {

@@ -6,13 +6,14 @@
     </div>
     <div class="row">
         <div class="col">
-            <div class="col">
-                <button [class]="' btn btn-block btn-' + Theme.Background + ' text-' + Theme.Text " 
-                    routerLink="{{ Pages.HOME }}"
-                    type="button">
-                    {{ 'login.home' | translate }}
-                </button>
-            </div>
+            <button [class]="' btn btn-' + Theme.Background + ' text-' + Theme.Text " 
+                routerLink="{{ Pages.HOME }}"
+                type="button">
+                {{ 'login.home' | translate }}
+            </button>
+        </div>
+        <div class="col">
+            <change-language [cpnClass]="' float-right '" ></change-language>
         </div>
     </div>
 </div>

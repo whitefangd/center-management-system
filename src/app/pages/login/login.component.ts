@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 
-import { ThemesService, LanguagesService } from '@boluclac/plugins/plugins';
-import { fadeInAnimation } from '@boluclac/animations/index';
-import { UserDetailService } from '@boluclac/common/common';
-import { Pages } from '@boluclac/pages/pages';
+import { ThemesService, LanguagesService } from '@boluclac/plugins';
+import { fadeInAnimation } from '@boluclac/animations';
+import { UserDetailService } from '@boluclac/common';
+import { Pages } from '@boluclac/pages';
 
 @Component({
 	selector: 'login',
