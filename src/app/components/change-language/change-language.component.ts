@@ -19,8 +19,8 @@ export class ChangeLanguageComponent {
 		protected _translate: TranslateService,
 		private _ThemeService: ThemesService) { }
 
-	public changeLanguage($event, theme) {
-		// this.ThemeKey = theme;
+	public changeLanguage($event, language) {
+		this._translate.use(this.Languages[language]);
 	}
 	public get Theme() {
 		return this._ThemeService.Theme;
