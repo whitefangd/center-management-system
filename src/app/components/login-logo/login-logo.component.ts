@@ -2,7 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 import { ThemesService, LanguagesService } from '@boluclac/plugins';
-import { Pages } from '@boluclac/pages';
+import { Global } from '@boluclac/common';
 
 
 @Component({
@@ -22,8 +22,8 @@ export class LoginLogoComponent {
 		this.ForgetPassword.emit();
 	}
 
-	public get Pages() {
-		return Pages;
+	public get PageUrls() {
+		return Global.PageUrls;
 	};
 	
 	public get Theme() {

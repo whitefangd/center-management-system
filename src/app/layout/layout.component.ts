@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { PartitionType } from '@boluclac/layout/partition-type';
+import { Global } from '@boluclac/common';
 import { ContentComponent } from '@boluclac/components-layout/content/content.component';
 
 @Component({
@@ -31,7 +31,7 @@ export class LayoutComponent {
 	}
 
 	public get PartitionType() {
-		return PartitionType;
+		return Global.PartitionType;
 	}
 
 	public get Type() {

@@ -1,0 +1,7 @@
+{
+    "Type": "GRID",
+    "PartitionTop": {
+        "Type": "COMPONENT",
+        "ComponentContent": "ContentComponent"
+    }
+}

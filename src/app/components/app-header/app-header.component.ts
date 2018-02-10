@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { ThemesService } from '@boluclac/plugins';
 import { Themes, ThemeKeys } from '@boluclac/plugins';
 import { UserDetailService } from '@boluclac/common';
-import { Pages } from '@boluclac/pages';
+import { Global } from '@boluclac/common';
 
 @Component({
 	selector: 'app-header',
@@ -43,11 +43,11 @@ export class AppHeaderComponent {
 
 	public logout($event) {
 		this._UserDetailService.Authentication = false;
-		this._Router.navigate([Pages.HOME]);
+		this._Router.navigate([Global.PageUrls.HOME]);
 	}
 
-	public get Pages() {
-		return Pages;
+	public get PageUrls() {
+		return Global.PageUrls;
 	};
 
 	public set ThemeKey(theme: any) {

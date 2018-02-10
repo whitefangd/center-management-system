@@ -3,3 +3,7 @@ import { ContentComponent } from '@boluclac/components-layout/content/content.co
 export const ComponentsLayout = [
     ContentComponent
 ] 
+
+export {
+    ContentComponent
+}

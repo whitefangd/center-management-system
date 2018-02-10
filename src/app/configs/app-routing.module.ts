@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HeroesComponent } from '@boluclac/pages/heroes/heroes.component';
-import { LoginComponent } from '@boluclac/pages/login/login.component';
-import { RegisterComponent } from '@boluclac/pages/register/register.component';
-import { ForgetPasswordComponent } from '@boluclac/pages/forget-password/forget-password.component';
-import { MainComponent } from '@boluclac/pages/main/main.component';
-import { HomeComponent } from '@boluclac/pages/home/home.component';
+import {
+	HomeComponent,
+	LoginComponent,
+	RegisterComponent,
+	ForgetPasswordComponent,
+	MainComponent,
+	HeroesComponent
+} from '@boluclac/pages';
 
 const routes: Routes = [
 	{ path: '', component: HomeComponent },

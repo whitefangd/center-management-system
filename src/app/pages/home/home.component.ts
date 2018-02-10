@@ -1,31 +1,34 @@
 import { Component } from '@angular/core';
 
+import { Global } from '@boluclac/common';
 import { ThemesService } from '@boluclac/plugins';
 import { fadeInAnimation } from '@boluclac/animations';
-import { ContentComponent } from '@boluclac/components-layout/content/content.component';
+import { ContentComponent } from '@boluclac/components-layout';
+
+const PartitionType = Global.PartitionType;
 
 const LayoutPage = {
-	Type: 1,
+	Type: PartitionType.GRID,
 	PartitionTop: {
-		Type: 2,
+		Type: PartitionType.COMPONENT,
 		ComponentContent: ContentComponent,
 	},
 	PartitionLeft: {
-		Type: 2,
+		Type: PartitionType.COMPONENT,
 		ComponentContent: ContentComponent,
 	},
 	PartitionBottom: {
-		Type: 2,
+		Type: PartitionType.COMPONENT,
 		ComponentContent: ContentComponent,
 	},
 	PartitionRight: {
-		Type: 2,
+		Type: PartitionType.COMPONENT,
 		ComponentContent: ContentComponent,
 	},
 	PartitionContent: {
-		Type: 1,
+		Type: PartitionType.GRID,
 		PartitionContent: {
-			Type: 2,
+			Type: PartitionType.COMPONENT,
 			ComponentContent: ContentComponent,
 		},
 	}
@@ -40,7 +43,7 @@ const LayoutPage = {
 })
 export class HomeComponent {
 
-	constructor(private _ThemeService: ThemesService) {	}
+	constructor(private _ThemeService: ThemesService) { }
 
 	public get LayoutPage() {
 		return LayoutPage;

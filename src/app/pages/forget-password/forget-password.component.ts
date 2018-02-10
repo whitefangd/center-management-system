@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { ThemesService, LanguagesService } from '@boluclac/plugins';
 import { fadeInAnimation } from '@boluclac/animations';
-import { Pages } from '@boluclac/pages';
+import { Global } from '@boluclac/common';
 
 @Component({
 	selector: 'forget-password',
@@ -19,8 +19,8 @@ export class ForgetPasswordComponent {
 		private _LanguagesService: LanguagesService) {
 	}
 
-	public get Pages() {
-		return Pages;
+	public get PageUrls() {
+		return Global.PageUrls;
 	}
 
 	public get Theme() {

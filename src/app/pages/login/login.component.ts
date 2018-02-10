@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { ThemesService, LanguagesService } from '@boluclac/plugins';
 import { fadeInAnimation } from '@boluclac/animations';
 import { UserDetailService } from '@boluclac/common';
-import { Pages } from '@boluclac/pages';
+import { Global } from '@boluclac/common';
 
 @Component({
 	selector: 'login',
@@ -25,11 +25,11 @@ export class LoginComponent {
 
 	public login($event) {
 		this._UserDetailService.Authentication = true;
-		this._Router.navigate([Pages.HOME]);
+		this._Router.navigate([Global.PageUrls.HOME]);
 	}
 
-	public get Pages() {
-		return Pages;
+	public get PageUrls() {
+		return Global.PageUrls;
 	}
 
 	public get Theme() {
